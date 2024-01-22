@@ -1,0 +1,43 @@
+{
+  "name": "rnm-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run copy-database && cp .env.production ./dist/src/ && cross-env NODE_ENV=production node dist/server.js",
+    "start:dev": "cross-env NODE_ENV=development npx nodemon",
+    "build": "rimraf ./dist && npx tsc",
+    "copy-database": "cp ./src/database/*.db ./dist/src/database/",
+    "test": "cross-env NODE_ENV=test jest --runInBand"
+  },
+  "author": "Jonathan Tejedera Neri",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.11",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/nedb": "^1.8.16",
+    "@types/node": "^20.11.0",
+    "@types/supertest": "^6.0.2",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "axios": "^1.6.5",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "nedb": "^1.8.0",
+    "rimraf": "^5.0.5"
+  }
+}
