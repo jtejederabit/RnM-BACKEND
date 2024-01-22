@@ -52,3 +52,12 @@ To deploy this project with Docker
 ```bash
   http://localhost:3000
 ```
+
+## Extra Libraries
+
+- Jest (Testing) - Used to test the API endpoints
+- Supertest (Testing) - Used to test the API endpoints
+- Axios (HTTP Client) - Used to fetch data from the R&M API
+- bcrypt (Password hashing) - Used to hash the user's password
+- jsonwebtoken (JWT) - Used to generate the JWT token
+- NeDB (Database) - Used to store the user's data
